@@ -5,35 +5,30 @@ This is a simple Python implementation of a 2-bit CPU emulator. The CPU supports
 
 ## Usage
 
-1. Clone the repository:
+1. Open Visual Studio and load the solution file:
 
-```bash
-git clone https://github.com/netflexs/CPU_Emulation.git
-cd 2-bit-cpu-emulator
-```
+    ```plaintext
+    CPU Emulation\CPU Emulation.sln
+    ```
 
-2. Run the `CPU_Emulation.py` script:
+2. Navigate to the `CPU_Emulation.py` file in the solution explorer.
 
-```bash
-python CPU_Emulation.py
-```
+3. Define your program in the `CPU_Emulation.py` file:
 
-3. Define your program in the `cpu.py` file:
+    ```python
+    # Example program
+    program = [
+        0b0101,  # Load value from memory cell 1
+        0b1010,  # Store value to memory cell 2
+        0b1111,  # Add value from memory cell 1 to register
+        0b1001   # Remove value from memory cell 1
+    ]
 
-```python
-# Example program
-program = [
-    0b0101,  # Load value from memory cell 1
-    0b1010,  # Store value to memory cell 2
-    0b1111,  # Add value from memory cell 1 to register
-    0b1001   # Remove value from memory cell 1
-]
+    cpu = CPU(memory_size=4)
+    cpu.run_program(program)
+    ```
 
-cpu = CPU(memory_size=4)
-cpu.run_program(program)
-```
-
-4. Customize the program as needed by modifying the `program` list in `cpu.py`.
+4. Customize the program as needed by modifying the `program` list in `CPU_Emulation.py`.
 
 ## Instructions
 
